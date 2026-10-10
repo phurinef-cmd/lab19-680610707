@@ -42,7 +42,7 @@ app.use(invalidJsonMiddleware);
 
 // Endpoints
 app.get("/", (req: Request, res: Response) => {
-  res.send("Lecture10 API services");
+  res.send("Lab19 API services");
 });
 
 app.get("/me", (req: Request, res: Response) => {
@@ -50,9 +50,9 @@ app.get("/me", (req: Request, res: Response) => {
     success: true,
     message: "Student Information",
     data: {
-      studentId: "600610999",
-      firstName: "Dome",
-      lastName: "Potikanond",
+      studentId: "680610707",
+      firstName: "Phurin",
+      lastName: "Bansupa",
       program: "CPE",
       section: "001",
     },
@@ -72,6 +72,8 @@ app.use(notFoundMiddleware);
 app.listen(port, () => {
   console.log(`🚀 Server running on http://localhost:${port}`);
 });
+
+// test for lab19
 
 // Export app for vercel deployment
 export default app;
