@@ -251,12 +251,12 @@ router.delete(
         data: safeUser,
       });
     } catch (err) {
-      return res.status(500).json({
-        success: false,
-        message: "Something is wrong, please try again",
-        error: err,
-      });
-    }
+        console.error("LOGIN ERROR:", err);
+        return res.status(500).json({
+          success: false,
+          message: "Something is wrong, please try again",
+        });
+      }
   },
 );
 
